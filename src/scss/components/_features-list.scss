@@ -1,0 +1,17 @@
+/*! ==========================================================================
+ *  .features-list
+ *  ========================================================================== */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: fluid-rem(24, 16);
+
+  &__item {
+    text-align: center;
+
+    span {
+      display: block;
+      margin-bottom: fluid-rem(16, 8);
+    }
+  }
+}

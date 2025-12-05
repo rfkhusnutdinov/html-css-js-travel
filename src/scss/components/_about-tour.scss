@@ -1,0 +1,67 @@
+/*! ==========================================================================
+ *  .about-tour
+ *  ========================================================================== */
+.about-tour {
+  // .about-tour__slider
+  &__slider {
+    width: 100%;
+    max-width: rem(846);
+    margin-inline: auto;
+  }
+
+  // .about-tour__card
+  &__card {
+    overflow: hidden;
+    border-radius: rem(20);
+  }
+
+  // .about-tour__card-image
+  &__card-image {
+    position: relative;
+
+    &::before {
+      display: block;
+      width: 100%;
+      padding-bottom: 61.93%;
+      content: "";
+
+      @include media-breakpoint(lg) {
+        padding-bottom: 87.71%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0%) 50%,
+        rgba(0, 0, 0, 100%) 100%
+      );
+      content: "";
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // .about-tour__card-text
+  &__card-text {
+    margin: 0;
+    padding: rem(24) rem(24) rem(32);
+    background: var(--color-white-10);
+    backdrop-filter: blur(rem(15));
+  }
+}

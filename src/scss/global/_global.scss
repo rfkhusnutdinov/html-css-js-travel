@@ -1,0 +1,280 @@
+/*! ==========================================================================
+ *  Global styles
+ *  ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  transition: color 0.2s ease;
+  text-underline-offset: rem(4);
+
+  @include hover {
+    color: var(--color-brand-yellow);
+    text-decoration: none;
+  }
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin-block: rem(16);
+}
+
+ul,
+ol {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.5em;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+video,
+audio,
+iframe {
+  display: block;
+  max-width: 100%;
+  margin: rem(16) 0;
+}
+
+iframe {
+  border: none;
+}
+
+.table {
+  width: 100%;
+  margin: rem(16) 0;
+
+  @include media-breakpoint(lg) {
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
+    padding-inline: calc((100vw - 100%) / 2);
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: rem(24);
+    background: var(--color-white-10);
+    border: 1px solid var(--color-white-10);
+    border-radius: rem(20);
+    backdrop-filter: blur(rem(15));
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: calc(100% - rem(48));
+      height: calc(100% - rem(48));
+      border: 1px solid rgba(255, 215, 146, 20%);
+      border-radius: rem(15);
+      transform: translate(-50%, -50%);
+      content: "";
+    }
+
+    @include media-breakpoint(lg) {
+      min-width: min-content;
+    }
+  }
+}
+
+table {
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-collapse: collapse;
+
+  @include media-breakpoint(lg) {
+    width: max(min-content, 100%);
+  }
+}
+
+tr {
+  border-radius: 15px;
+
+  &:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+}
+
+th,
+td {
+  padding: rem(16);
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 215, 146, 20%);
+  border-radius: 15px;
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(255, 215, 146, 20%);
+  }
+
+  @include media-breakpoint(lg) {
+    min-width: rem(199);
+  }
+}
+
+th {
+  color: var(--color-brand-yellow);
+  font: var(--font-heading-3);
+}
+
+code {
+  padding: rem(2) rem(4);
+  font-size: 0.95em;
+  font-family: monospace;
+  background-color: lightgray;
+}
+
+pre {
+  padding: rem(16);
+  overflow-x: auto;
+  background-color: lightgray;
+  border-radius: rem(4);
+}
+
+abbr {
+  cursor: help;
+}
+
+blockquote {
+  margin: rem(16) 0;
+  padding: rem(24) rem(24) rem(24) rem(88);
+  background: var(--color-white-10);
+  border: 1px solid var(--color-white-10);
+  border-radius: rem(20);
+  backdrop-filter: blur(rem(15));
+
+  @include media-breakpoint(md) {
+    padding: rem(64) rem(24) rem(24);
+  }
+
+  &::before {
+    position: absolute;
+    top: rem(24);
+    left: rem(24);
+    display: block;
+    width: fluid-rem(40, 24);
+    height: fluid-rem(40, 24);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNDAnIGhlaWdodD0nNDAnIHZpZXdCb3g9JzAgMCA0MCA0MCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMzIuMzYxNSAxMS4xMzE3QzM0LjA3ODIgMTIuOTU1MSAzNC45OTk5IDE1LjAwMDEgMzQuOTk5OSAxOC4zMTUxQzM0Ljk5OTkgMjQuMTQ4NCAzMC45MDY1IDI5LjM3NjcgMjQuOTQ5OSAzMS45NjE3TDIzLjQ2MTUgMjkuNjY1MUMyOS4wMTk5IDI2LjY1ODQgMzAuMTA2NSAyMi43NTY3IDMwLjU0MTUgMjAuMjk2N0MyOS42NDY1IDIwLjc2MDEgMjguNDc0OSAyMC45MjE3IDI3LjMyNDkgMjAuODE1MUMyNC4zMTgyIDIwLjUzNjcgMjEuOTQ4MiAxOC4wNjg0IDIxLjk0ODIgMTUuMDAwMUMyMS45NDgyIDEzLjQ1MyAyMi41NjI4IDExLjk2OTMgMjMuNjU2NyAxMC44NzUzQzI0Ljc1MDcgOS43ODEzMyAyNi4yMzQ0IDkuMTY2NzUgMjcuNzgxNSA5LjE2Njc1QzI5LjU2OTkgOS4xNjY3NSAzMS4yODE1IDkuOTgzNDEgMzIuMzYxNSAxMS4xMzE3Wk0xNS42OTQ5IDExLjEzMTdDMTcuNDExNSAxMi45NTUxIDE4LjMzMzIgMTUuMDAwMSAxOC4zMzMyIDE4LjMxNTFDMTguMzMzMiAyNC4xNDg0IDE0LjIzOTkgMjkuMzc2NyA4LjI4MzIgMzEuOTYxN0w2Ljc5NDg3IDI5LjY2NTFDMTIuMzUzMiAyNi42NTg0IDEzLjQzOTkgMjIuNzU2NyAxMy44NzMyIDIwLjI5NjdDMTIuOTc4MiAyMC43NjAxIDExLjgwNjUgMjAuOTIxNyAxMC42NTgyIDIwLjgxNTFDNy42NTE1NCAyMC41Mzg0IDUuMjgzMiAxOC4wNzAxIDUuMjgzMiAxNS4wMDAxQzUuMjgzMiAxMy40NTMgNS44OTc3OCAxMS45NjkzIDYuOTkxNzUgMTAuODc1M0M4LjA4NTcxIDkuNzgxMzMgOS41Njk0NCA5LjE2Njc1IDExLjExNjUgOS4xNjY3NUMxMi45MDQ5IDkuMTY2NzUgMTQuNjE2NSA5Ljk4MzQxIDE1LjY5NjUgMTEuMTMxNycgZmlsbD0nd2hpdGUnIC8+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
+}
+
+:focus {
+  outline-width: 0 !important;
+}
+
+:focus-visible {
+  outline-width: rem(2) !important;
+  outline-offset: rem(5) !important;
+}
+
+/* stylelint-disable-next-line at-rule-no-vendor-prefix */
+@-moz-document url-prefix() {
+  :focus-visible {
+    outline: rem(2) solid #ffd700 !important;
+  }
+}
+
+.fslightbox-slide-btn-container {
+  display: none !important;
+}
+
+.fslightboxsn {
+  display: none !important;
+}
+
+.fslightbox-container {
+  background: rgba(8, 3, 3, 80%) !important;
+}
+
+.fslightbox-toolbar-button:nth-child(1) {
+  display: none !important;
+}
+
+.fslightbox-toolbar-button {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  background: transparent !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  -webkit-appearance: none;
+}
+
+.fslightbox-toolbar-button svg path {
+  fill: white !important;
+
+  // stroke: white !important;
+}
+
+.fslightbox-source {
+  border-radius: rem(20);
+  margin-inline: auto;
+  margin-block: 0;
+
+  @include media-breakpoint(md) {
+    border-radius: rem(0);
+  }
+}
+
+.fslightbox-container video,
+.fslightbox-container iframe {
+  max-width: calc(100% - rem(30)) !important;
+  max-height: calc(100vh - rem(30)) !important;
+  max-height: calc(100dvh - rem(30)) !important;
+
+  @include media-breakpoint(md) {
+    max-width: 100% !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+  }
+}
+
+.fslightbox-toolbar {
+  z-index: 2147483647 !important; /* максимальный уровень */
+}

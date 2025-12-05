@@ -1,0 +1,39 @@
+/* Заголовки */
+:root {
+  --font-heading-1: 700 #{fluid-rem(56, 21)} / 1.5 var(--font-family-secondary);
+  --font-heading-2: 700 #{fluid-rem(40, 17)} / 1.5 var(--font-family-secondary);
+  --font-heading-3: 600 #{fluid-rem(20, 13)} / 1.5 var(--font-family-secondary);
+  --letter-spacing-heading: 0.02em;
+}
+
+.h1,
+h1 {
+  font: var(--font-heading-1);
+  letter-spacing: var(--letter-spacing-heading);
+  text-transform: uppercase;
+}
+
+.h2,
+h2 {
+  font: var(--font-heading-2);
+  letter-spacing: var(--letter-spacing-heading);
+  text-transform: uppercase;
+}
+
+.h3,
+h3 {
+  font: var(--font-heading-3);
+  letter-spacing: var(--letter-spacing-heading);
+  text-transform: uppercase;
+}
+
+/* Тексты */
+.text-1 {
+  font-weight: 400;
+  font-size: rem(16);
+}
+
+.text-2 {
+  font-weight: 400;
+  font-size: rem(14);
+}

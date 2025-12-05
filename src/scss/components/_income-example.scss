@@ -1,0 +1,109 @@
+/*! ==========================================================================
+ *  .income-example
+ *  ========================================================================== */
+
+.income-example {
+  // .income-example__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(24);
+    justify-content: center;
+
+    // @include media-breakpoint(lg) {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+
+    // @include media-breakpoint(md) {
+    //   grid-template-columns: repeat(1, 1fr);
+    // }
+  }
+
+  // .income-example__list-item
+  &__list-item {
+    width: calc((100% / 3) - rem(24) * 2);
+
+    @include media-breakpoint(xl) {
+      width: calc((100% / 2) - rem(24) * 1);
+    }
+
+    @include media-breakpoint(md) {
+      width: calc((100% / 1) - rem(24) * 0);
+    }
+  }
+
+  // .income-example__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    padding: rem(24);
+    background-color: var(--color-white-10);
+    border: 1px solid var(--color-white-10);
+    border-radius: rem(20);
+    backdrop-filter: blur(rem(15));
+  }
+
+  // .income-example__block-title
+  &__block-title {
+    margin: 0;
+    font: var(--font-heading-3);
+    text-align: center;
+  }
+
+  // .income-example__block-chars
+  &__block-chars {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  // .income-example__block-char
+  &__block-char {
+    display: flex;
+    align-items: flex-end;
+    font-size: rem(16);
+
+    &::before {
+      flex: 1;
+      order: 1;
+      height: 1px;
+      margin: 0 rem(10) rem(5);
+      background-image: repeating-linear-gradient(
+        to right,
+        var(--color-white-20),
+        /* цвет штриха */ var(--color-white-20) rem(6),
+        /* длина штриха */ transparent rem(6),
+        transparent rem(12) /* длина пробела */
+      );
+      content: "";
+    }
+  }
+
+  // .income-example__block-char-key
+  &__block-char-key {
+    display: flex;
+    gap: rem(10);
+    align-items: center;
+
+    .icon {
+      color: var(--color-brand-yellow);
+      font-size: rem(16);
+    }
+  }
+
+  // .income-example__block-char-value
+  &__block-char-value {
+    order: 2;
+    text-align: right;
+
+    // white-space: nowrap;
+  }
+
+  // .income-example__block-sum
+  &__block-sum {
+    color: var(--color-brand-yellow);
+    font: var(--font-heading-3);
+    text-align: center;
+  }
+}

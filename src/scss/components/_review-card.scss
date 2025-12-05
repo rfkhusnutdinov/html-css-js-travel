@@ -1,0 +1,73 @@
+/*! ==========================================================================
+ *  .review-card
+ *  ========================================================================== */
+.review-card {
+  overflow: hidden;
+  border-radius: rem(20);
+
+  // .review-card__top
+  &__top {
+    position: relative;
+  }
+
+  // .review-card__image
+  &__image {
+    position: relative;
+
+    &::before {
+      display: block;
+      width: 100%;
+      padding-bottom: 115.89%;
+      content: "";
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // .review-card__button
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(58);
+    height: rem(58);
+    color: var(--color-text-dark);
+    background-color: var(--color-white-50);
+    border: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      color: var(--color-text-dark);
+      background-color: var(--color-white-100);
+    }
+  }
+
+  // .review-card__info
+  &__info {
+    padding: rem(24);
+    background: var(--color-white-10);
+    backdrop-filter: blur(15px);
+  }
+
+  // .review-card__text
+  &__text {
+    margin: 0;
+  }
+}

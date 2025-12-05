@@ -1,0 +1,43 @@
+/*! ==========================================================================
+ *  Variables
+ *  ========================================================================== */
+$breakpoints: (
+  xs: 0,
+  sm: rem(576),
+  md: rem(768),
+  lg: rem(992),
+  xl: rem(1200),
+  xxl: rem(1440),
+);
+$min-breakpoint: rem(375);
+$max-breakpoint: rem(1440);
+$max-viewport-width: rem(1440);
+
+:root {
+  /* Базовые */
+  --color-white-100: #fff;
+  --color-white-90: rgba(255, 255, 255, 90%);
+  --color-white-50: rgba(255, 255, 255, 50%);
+  --color-white-30: rgba(255, 255, 255, 30%);
+  --color-white-20: rgba(255, 255, 255, 20%);
+  --color-white-10: rgba(255, 255, 255, 10%);
+  --color-white-0: rgba(255, 255, 255, 0%);
+
+  /* Брендовые */
+  --color-brand-yellow: #ffd792;
+  --color-brand-yellow-light: #ffe5b5;
+  --color-brand-cream: #fff2d8;
+  --color-brand-brown: #673a00;
+  --color-brand-burgundy: #2c1414;
+
+  /* Текстовые */
+  --color-text-dark: #212121;
+
+  /* Состояния */
+  --color-success: #22d458;
+  --color-error: #ff5029;
+
+  /* Шрифты */
+  --font-family-primary: "Inter Tight", sans-serif;
+  --font-family-secondary: "Sunday", serif;
+}

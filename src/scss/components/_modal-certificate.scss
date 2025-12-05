@@ -1,0 +1,62 @@
+/*! ==========================================================================
+ *  .modal-certificate
+ *  ========================================================================== */
+.modal-certificate {
+  // .modal-certificate__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid-rem(24, 16);
+    margin-top: fluid-rem(40, 32);
+
+    @include media-breakpoint(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .modal-certificate__chars
+  &__chars {
+    display: flex;
+    flex-direction: column;
+    gap: fluid-rem(12, 10);
+    align-items: flex-start;
+  }
+
+  // .modal-certificate__char
+  &__char {
+    display: flex;
+    gap: rem(10);
+    align-items: flex-start;
+    margin: 0;
+
+    .icon {
+      color: var(--color-brand-yellow);
+      font-size: rem(24);
+    }
+  }
+
+  // .modal-certificate__cities
+  &__cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fluid-rem(16, 8) fluid-rem(24, 16);
+    justify-content: center;
+    margin-top: fluid-rem(40, 32);
+    font-size: fluid-rem(20, 13);
+    font-family: var(--font-family-secondary);
+    line-height: 1.5;
+  }
+
+  // .modal-certificate__images
+  &__image {
+    @include media-breakpoint(md) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      margin: 0;
+      border-radius: rem(16);
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{% extends "layouts/_default.html" %} {% set title = "О проекте" %} {% set
+pageId = "about" %} {% block main %}
+
+<div class="breadcrumbs" data-aos="fade-up">
+  <div class="container">
+    <nav class="breadcrumbs__nav" aria-label="Breadcrumb">
+      <ol class="list-reset breadcrumbs__list">
+        <li class="breadcrumbs__list-item">
+          <a class="breadcrumbs__list-link" href="./">Главная</a>
+        </li>
+        <li class="breadcrumbs__list-item" aria-current="page">О проекте</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section class="section section--page contacts" data-aos="fade-up">
+  <div class="container">
+    <h1 class="about__title">Что такое фаолеро?</h1>
+    <div class="about__image">
+      <img src="images/about/image-01.webp" alt="" />
+    </div>
+    <ul class="list-reset features-list about__features">
+      <li class="features-list__item">
+        <span class="h2">20</span>
+        маршрутов в 8 городах
+      </li>
+      <li class="features-list__item">
+        <span class="h2">150.000+</span>
+        довольных гостей
+      </li>
+      <li class="features-list__item">
+        <span class="h2">8 лет</span>
+        на рынке экскурсий
+      </li>
+    </ul>
+    <div class="content about__content">
+      <h2>Lorem ipsum dolor sit amet consectetur. Aliquam tincidunt massa</h2>
+      <div class="two-columns">
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Habitant ut eu etiam feugiat
+          feugiat nullam. Bibendum convallis vehicula ante at dignissim orci
+          quis id augue. Quis ullamcorper est non sapien rhoncus sagittis
+          commodo id. Feugiat adipiscing praesent facilisi ipsum amet ut in
+          auctor. Sem quis tincidunt quam fames id velit porta et. Leo leo
+          tortor lacus a consectetur etiam. Tristique lacus urna pretium
+          adipiscing sed. Consectetur nec maecenas diam maecenas non amet
+          aliquam magna leo. Sed ac non odio dignissim eu sagittis volutpat a
+          hac. Ornare et phasellus et sapien risus enim. Sed amet neque
+          adipiscing a cursus vivamus. Erat malesuada lectus vulputate duis
+        </p>
+        <p>
+          Pretium donec vitae vel penatibus porttitor lacus in porta. Lacus
+          euismod faucibus sit maecenas ipsum ridiculus est ut. Eget habitasse
+          ut dictum pharetra ullamcorper. Pellentesque ornare nisi nisi lectus
+          sed sollicitudin enim leo in. Facilisis arcu eget vestibulum ut. Nunc
+          iaculis lorem quam tincidunt sed egestas egestas feugiat. Ut tincidunt
+          mauris nunc blandit consectetur condimentum in. Enim non fermentum
+          amet eget morbi. Quam in non amet elementum dictum aliquam at risus
+          amet. Arcu sagittis semper pharetra vitae adipiscing libero sit.
+          Mauris eget neque lacinia vestibulum. Id cursus eu purus sed
+          pellentesque bibendum. Mattis neque purus a volutpat massa facilisis.
+        </p>
+      </div>
+    </div>
+    <ul class="list-reset about__gallery">
+      <li class="about__gallery-image">
+        <a
+          class="about__gallery-image-link"
+          data-fslightbox="about"
+          href="images/about/image-02.webp"
+          ><img src="images/about/image-02.webp" loading="lazy" alt=""
+        /></a>
+      </li>
+      <li class="about__gallery-image">
+        <a
+          class="about__gallery-image-link"
+          data-fslightbox="about"
+          href="images/about/image-03.webp"
+          ><img src="images/about/image-03.webp" loading="lazy" alt=""
+        /></a>
+      </li>
+      <li class="about__gallery-image">
+        <a
+          class="about__gallery-image-link"
+          data-fslightbox="about"
+          href="images/about/image-04.webp"
+          ><img src="images/about/image-04.webp" loading="lazy" alt=""
+        /></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

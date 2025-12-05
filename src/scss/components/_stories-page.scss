@@ -1,0 +1,26 @@
+/*! ==========================================================================
+ *  .stories-page
+ *  ========================================================================== */
+.stories-page {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(32) fluid-rem(24, 16);
+
+    @include media-breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint(md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__list-item {
+  }
+
+  // .stories-page__pagination
+  &__pagination {
+    margin-top: rem(48);
+  }
+}

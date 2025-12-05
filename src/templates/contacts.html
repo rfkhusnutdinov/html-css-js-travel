@@ -1,0 +1,87 @@
+{% extends "layouts/_default.html" %} {% set title = "Контакты" %} {% set pageId
+= "contacts" %} {% block main %}
+
+<div class="breadcrumbs" data-aos="fade-up">
+  <div class="container">
+    <nav class="breadcrumbs__nav" aria-label="Breadcrumb">
+      <ol class="list-reset breadcrumbs__list">
+        <li class="breadcrumbs__list-item">
+          <a class="breadcrumbs__list-link" href="./">Главная</a>
+        </li>
+        <li class="breadcrumbs__list-item" aria-current="page">Контакты</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section class="section section--page contacts" data-aos="fade-up">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <h1 class="contacts__title">Контакты</h1>
+      <div class="contacts__groups">
+        <div class="contacts__group">
+          <h2 class="contacts__group-title">
+            Корпоративные и групповые заказы
+          </h2>
+          <a class="contacts__group-link" href="mailto:info@farolero.travel"
+            >info@farolero.travel</a
+          >
+        </div>
+        <div class="contacts__group">
+          <h2 class="contacts__group-title">Реклама и маркетинг</h2>
+          <a class="contacts__group-link" href="mailto:info@farolero.travel"
+            >marketing@farolero.travel</a
+          >
+        </div>
+        <div class="contacts__group">
+          <h2 class="contacts__group-title">Реквизиты</h2>
+          <div class="contacts__group-list">
+            <div class="contacts__group-item">
+              <span>ИП</span>
+              <span>Бикбаева Дария Альфредовна</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>ИНН</span>
+              <span>165500074233</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>ОГРН</span>
+              <span>304165536300298</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>Расчетный счет</span>
+              <span>40802810700020001671</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>Банк</span>
+              <span>ПАО «АК БАРС» Банк г.Казань</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>К/счет </span>
+              <span>30101810000000000805</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>БИК</span>
+              <span>049205805</span>
+            </div>
+            <div class="contacts__group-item">
+              <span class="desktop-only">Юридический адрес:</span>
+              <span class="mobile-only">Юр. адрес:</span>
+              <span>420012, г. Казань, ул. Волкова, 79 кв. 38</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>Адрес:</span>
+              <span>Москва, Комсомольский проспект 9, офис N9</span>
+            </div>
+            <div class="contacts__group-item">
+              <span>Телефон:</span>
+              <span>+79179039797</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

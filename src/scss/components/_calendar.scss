@@ -1,0 +1,102 @@
+/*! ==========================================================================
+ *  .calendar
+ *  ========================================================================== */
+
+.calendar {
+  width: 100%;
+  padding: rem(24);
+  background: var(--color-white-10);
+  border: 1px solid var(--color-white-10);
+  border-radius: rem(20);
+  backdrop-filter: blur(15px);
+
+  &__header {
+    display: flex;
+    gap: rem(8);
+    align-items: center;
+    margin-bottom: rem(20);
+  }
+
+  &__month {
+    margin-right: auto;
+    font-weight: 400;
+    font-size: rem(13);
+    font-family: var(--font-family-secondary);
+    line-height: 1.5;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(40);
+    height: rem(40);
+    color: #fff;
+    font-size: rem(16);
+    background-color: var(--color-white-10);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(15px);
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: var(--color-white-20);
+    }
+
+    &:disabled {
+      background-color: var(--color-white-10) !important;
+      cursor: initial;
+      opacity: 0.5;
+    }
+  }
+
+  &__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: rem(8);
+    font-weight: bold;
+    font-weight: 600;
+    font-size: rem(13);
+    line-height: rem(20);
+    text-align: center;
+  }
+
+  &__dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: rem(8) 0;
+  }
+
+  &__date-item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    align-items: center;
+    min-height: rem(43);
+    padding: rem(4) 0;
+    font-weight: 400;
+    font-size: rem(13);
+    line-height: 1.5;
+    text-align: center;
+
+    &.disabled {
+      opacity: 0.5;
+    }
+
+    span {
+      color: var(--color-brand-yellow);
+      font-weight: 500;
+      font-size: rem(9);
+      line-height: 1.2;
+
+      &.discount {
+        color: var(--color-success);
+      }
+
+      &.sold {
+        color: var(--color-error);
+      }
+    }
+  }
+}

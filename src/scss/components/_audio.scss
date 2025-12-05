@@ -1,0 +1,94 @@
+/*! ==========================================================================
+ *  .audio
+ *  ========================================================================== */
+.audio {
+  display: flex;
+  gap: rem(16);
+  align-items: center;
+  max-width: rem(439);
+
+  @include media-breakpoint(md) {
+    padding: rem(16);
+    background: rgba(255, 255, 255, 10%);
+    border: 1px solid rgba(255, 255, 255, 10%);
+    border-radius: rem(20);
+    backdrop-filter: blur(15px);
+  }
+
+  // .audio__button
+  &__button {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: rem(58);
+    height: rem(58);
+    color: var(--color-text-dark);
+    font-size: rem(20);
+    background-color: var(--color-white-100);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: var(--color-brand-yellow);
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &:first-child {
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &--active {
+      .icon {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // .audio__progress
+  &__progress {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+  }
+
+  // .audio__progress-filled
+  &__progress-filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: url("../images/legend/progress-full.svg") left center / cover
+      no-repeat;
+  }
+
+  &__audio {
+  }
+}

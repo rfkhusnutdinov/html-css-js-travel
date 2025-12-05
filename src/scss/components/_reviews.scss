@@ -1,0 +1,51 @@
+/*! ==========================================================================
+ *  .reviews
+ *  ========================================================================== */
+.reviews {
+  // .reviews__tabs
+  &__tabs {
+  }
+
+  // .reviews__tabs-nav
+  &__tabs-nav {
+    margin-bottom: fluid-rem(40, 16);
+  }
+
+  // .reviews__tabs-panels
+  &__tabs-panels {
+  }
+
+  // .reviews__slider
+  &__slider {
+    --slider-per-page: 4;
+
+    @include media-breakpoint(xl) {
+      --slider-per-page: 3;
+    }
+
+    @include media-breakpoint(lg) {
+      .splide__slide {
+        width: min(95%, rem(320));
+      }
+    }
+
+    .splide__arrows {
+      margin-top: rem(40);
+    }
+  }
+
+  // .reviews__button-wrapper
+  &__button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: fluid-rem(48, 16);
+  }
+
+  // .reviews__button
+  &__button {
+    @include media-breakpoint(sm) {
+      width: 100%;
+    }
+  }
+}

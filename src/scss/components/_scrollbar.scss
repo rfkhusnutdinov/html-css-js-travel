@@ -1,0 +1,39 @@
+/*! ==========================================================================
+ *  Scrollbar - px
+ *  ========================================================================== */
+:root {
+  --scrollbar-base-thumb-color: var(--color-white-50);
+  --scrollbar-base-track-color: var(--color-white-20);
+  --scrollbar-base-width: 8px;
+  --scrollbar-base-thumbs-border-radius: 4px;
+  --scrollbar-base-margin-y: 0;
+  --scrollbar-base-margin-x: 0;
+
+  @include media-breakpoint(lg) {
+    --scrollbar-base-width: 4px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-base-width);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-base-thumb-color);
+  border-radius: var(--scrollbar-base-thumbs-border-radius);
+}
+
+::-webkit-scrollbar-track {
+  margin: var(--scrollbar-base-margin-y) var(--scrollbar-base-margin-x);
+  background: var(--scrollbar-base-track-color);
+  border-radius: var(--scrollbar-base-thumbs-border-radius);
+}
+
+/* stylelint-disable-next-line at-rule-no-vendor-prefix */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-base-thumb-color)
+      var(--scrollbar-base-track-color);
+  }
+}

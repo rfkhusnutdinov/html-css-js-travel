@@ -1,0 +1,11 @@
+<div
+  class="page-top {% if pageId in ['index', 'birthday', 'partners', 'new-year'] %}page-top--hero{% endif %} page__top"
+>
+  {% include "./_header.html" %} {% if pageId not in ["blog", "contacts",
+  "article", "about"] %} {% include "./_hero.html" %}
+  <div
+    class="page-top__bg"
+    style="background-image: url(images/page/bg-top.webp)"
+  ></div>
+  {% endif %}
+</div>

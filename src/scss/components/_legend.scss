@@ -1,0 +1,28 @@
+/*! ==========================================================================
+ *  .legend
+ *  ========================================================================== */
+.legend {
+  // .legend__wrapper
+  &__wrapper {
+    display: flex;
+    gap: fluid-rem(40, 24);
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__audio {
+    flex-grow: 1;
+  }
+
+  // .legend__button
+  &__button {
+    @include media-breakpoint(sm) {
+      width: 100%;
+    }
+  }
+}

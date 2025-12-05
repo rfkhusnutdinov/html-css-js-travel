@@ -1,0 +1,106 @@
+/*! ==========================================================================
+ *  .story-article
+ *  ========================================================================== */
+.story-article {
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+
+  @include hover {
+    .story-article__image img {
+      transform: scale(1.05);
+    }
+  }
+
+  // .story-article__image
+  &__image {
+    position: relative;
+    width: 100%;
+    margin-bottom: rem(26);
+
+    &::before {
+      display: block;
+      width: 100%;
+      padding-bottom: 60.82%;
+      content: "";
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      object-fit: cover;
+      object-position: center;
+      border-radius: rem(20);
+      transition: transform 0.3s ease;
+      will-change: transform;
+    }
+  }
+
+  // .story-article__title
+  &__title {
+    margin-top: 0;
+    margin-bottom: rem(8);
+    color: var(--color-brand-yellow);
+  }
+
+  // .story-article__excerpt
+  &__excerpt {
+    margin-top: 0;
+    margin-bottom: rem(16);
+  }
+
+  // .story-article__chars
+  &__chars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(8);
+  }
+
+  // .story-article__char
+  &__char {
+    &:not(:last-child) {
+      display: inline-flex;
+      gap: rem(8);
+      align-items: center;
+
+      &::after {
+        display: block;
+        width: rem(9);
+        height: rem(8);
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nOScgaGVpZ2h0PSc4JyB2aWV3Qm94PScwIDAgOSA4JyBmaWxsPSdub25lJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGQ9J000LjUgMEM0Ljk5Njk0IDIuNDk1MjkgNS45OTAyNCAzLjQ5ODI0IDguNSA0QzUuOTg5NjYgNC41MDE3NiA0Ljk5NjM2IDUuNTA0NzEgNC41IDhDNC4wMDMwNiA1LjUwNDcxIDMuMDA5NzYgNC41MDExOCAwLjUgNEMzLjAxMDM0IDMuNDk4MjQgNC4wMDM2NCAyLjQ5NTI5IDQuNSAwWicgZmlsbD0nd2hpdGUnIC8+PC9zdmc+");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: "";
+      }
+    }
+
+    // .story-article__char--tag
+    &--tag {
+    }
+
+    // .story-article__char--date
+    &--date {
+    }
+  }
+
+  // .story-article__link
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    border-radius: rem(20) rem(20) 0 0;
+
+    @include hover {
+      color: transparent;
+    }
+  }
+}

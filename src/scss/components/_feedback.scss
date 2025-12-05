@@ -1,0 +1,19 @@
+/*! ==========================================================================
+ *  .feedback
+ *  ========================================================================== */
+.feedback {
+  // .feedback__form
+  &__form {
+    max-width: rem(410);
+    margin-inline: auto;
+    padding-top: rem(0, 8);
+  }
+
+  // .feedback__form-input
+  &__form-input {
+  }
+
+  // .feedback__form-button
+  &__form-button {
+  }
+}

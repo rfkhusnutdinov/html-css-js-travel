@@ -1,0 +1,81 @@
+<section class="hero" data-aos="fade-up">
+  <div class="container">
+    <div class="hero__info">
+      <h1 class="hero__title">
+        театрализованные экскурсии с полным погружением
+      </h1>
+      <p class="hero__text">
+        Уникальный необычный формат прогулки по таинственным местам городов
+      </p>
+
+      <a
+        class="button button--primary hero__button"
+        href="{% if pageId in ['index', 'birthday', 'partners'] %}./#routes{% endif %}{% if pageId in ['new-year'] %}#routes{% endif %}"
+      >
+        Выбрать маршрут
+        <span class="button__bg"></span>
+      </a>
+    </div>
+    <div class="hero__bottom">
+      <a
+        class="hero__video"
+        data-autoplay
+        data-fslightbox="hero"
+        href="images/video/video-example.mp4"
+        aria-label="Посмотреть атмосферу"
+      >
+        <span class="hero__video-poster">
+          <img src="images/hero/poster.webp" alt="" />
+          <span class="hero__video-button">
+            <span class="icon"
+              ><svg
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.25 9.9999C19.2505 10.2121 19.1961 10.4208 19.0921 10.6058C18.988 10.7907 18.8379 10.9456 18.6562 11.0554L7.4 17.9413C7.21022 18.0575 6.99287 18.121 6.77037 18.1251C6.54788 18.1292 6.32832 18.0738 6.13438 17.9647C5.94227 17.8573 5.78225 17.7007 5.67075 17.5109C5.55926 17.3212 5.50032 17.1051 5.5 16.8851V3.11475C5.50032 2.89466 5.55926 2.67862 5.67075 2.48886C5.78225 2.2991 5.94227 2.14247 6.13438 2.03506C6.32832 1.92596 6.54788 1.87061 6.77037 1.87473C6.99287 1.87885 7.21022 1.94229 7.4 2.0585L18.6562 8.94443C18.8379 9.05418 18.988 9.20906 19.0921 9.39401C19.1961 9.57896 19.2505 9.78769 19.25 9.9999Z"
+                  fill="currentColor"
+                /></svg
+            ></span>
+          </span>
+        </span>
+        <span class="hero__video-text">Посмотреть атмосферу</span>
+      </a>
+      <div class="hero__bottom-group">
+        <ul class="list-reset features-list hero__list">
+          <li class="features-list__item">
+            <span class="h2">20</span>
+            маршрутов в 8 городах
+          </li>
+          <li class="features-list__item">
+            <span class="h2">150.000+</span>
+            довольных гостей
+          </li>
+          <li class="features-list__item">
+            <span class="h2">8 лет</span>
+            на рынке экскурсий
+          </li>
+        </ul>
+        <span class="hero__bottom-link">
+          <span class="icon">
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.33301 3.33325C6.33301 3.71734 6.15368 4.12141 5.96191 4.45923C5.7599 4.81506 5.49636 5.17789 5.24121 5.49829C4.62725 6.26925 3.89913 6.95425 3.06641 7.50024H16.5V8.50024H3.06738C3.89962 9.04609 4.62753 9.73063 5.24121 10.5012C5.49637 10.8216 5.7599 11.1844 5.96191 11.5403C6.15367 11.8781 6.33291 12.2822 6.33301 12.6663H5.33301C5.33288 12.5561 5.2685 12.3441 5.09277 12.0344C4.92684 11.7421 4.69811 11.4245 4.45898 11.1243C3.85468 10.3654 3.13737 9.70825 2.32129 9.20923C2.00919 9.01838 1.67331 8.8374 1.34766 8.70532C1.01628 8.57094 0.727062 8.50024 0.5 8.50024V7.50024L0.681641 7.48657C0.874265 7.46042 1.09915 7.39594 1.34766 7.29517C1.67328 7.16312 2.0092 6.98208 2.32129 6.79126C3.13742 6.29221 3.85465 5.63411 4.45898 4.87524C4.69809 4.57499 4.92686 4.25832 5.09277 3.96606C5.26888 3.65585 5.33301 3.44341 5.33301 3.33325H6.33301Z"
+                fill="currentColor"
+              />
+            </svg> </span
+          >Почувствуйте атмосферу прогулки</span
+        >
+      </div>
+    </div>
+  </div>
+</section>

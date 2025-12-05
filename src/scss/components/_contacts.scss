@@ -1,0 +1,82 @@
+/*! ==========================================================================
+ *  .contacts
+ *  ========================================================================== */
+.contacts {
+  &__wrapper {
+    width: 100%;
+    max-width: rem(846);
+    margin-inline: auto;
+  }
+
+  // .contacts__title
+  &__title {
+    margin-top: 0;
+    margin-bottom: fluid-rem(40, 24);
+    color: var(--color-brand-yellow);
+    font: var(--font-heading-2);
+  }
+
+  // .contacts__groups
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  // .contacts__group
+  &__group {
+  }
+
+  // .contacts__group-title
+  &__group-title {
+    margin-top: 0;
+    margin-bottom: rem(8);
+    font: var(--font-heading-3);
+  }
+
+  // .contacts__group-link
+  &__group-link {
+    display: block;
+  }
+
+  // .contacts__group-list
+  &__group-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    padding-top: rem(8);
+  }
+
+  // .contacts__group-item
+  &__group-item {
+    display: flex;
+    align-items: flex-end;
+
+    &::before {
+      flex: 1;
+      order: 1;
+      height: 1px;
+      margin: 0 rem(10) rem(5);
+      background-image: repeating-linear-gradient(
+        to right,
+        var(--color-white-20),
+        /* цвет штриха */ var(--color-white-20) rem(6),
+        /* длина штриха */ transparent rem(6),
+        transparent rem(12) /* длина пробела */
+      );
+      content: "";
+    }
+
+    span {
+      &:first-child {
+      }
+
+      &:last-child {
+        order: 2;
+
+        // white-space: nowrap;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+/*! ==========================================================================
+ *  .splide
+ *  ========================================================================== */
+.splide {
+  --slider-per-page: 1;
+  --slider-gap: #{fluid-rem(24, 16)};
+
+  // .splide__track
+  &__track {
+    &--visible {
+      overflow: visible;
+    }
+  }
+
+  // .splide__list
+  &__list {
+  }
+
+  // .splide__slide
+  &__slide {
+    display: flex;
+    width: calc(
+      (100% - var(--slider-gap) * (var(--slider-per-page) - 1)) /
+        var(--slider-per-page)
+    );
+
+    &:not(:last-child) {
+      margin-right: var(--slider-gap);
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    gap: fluid-rem(16, 8);
+    align-items: center;
+    justify-content: center;
+    margin-top: fluid-rem(48, 24);
+
+    @include media-breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fluid-rem(58, 40);
+    height: fluid-rem(58, 40);
+    padding: 0;
+    color: var(--color-white-100);
+    background-color: var(--color-white-10);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(15px);
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      color: var(--color-brand-burgundy);
+      background-color: var(--color-brand-yellow);
+    }
+
+    svg {
+      width: fluid-rem(24, 16);
+      height: fluid-rem(24, 16);
+      fill: currentcolor;
+    }
+
+    &--prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+    margin-top: rem(16);
+    padding-left: 0;
+
+    @include media-breakpoint(lg, up) {
+      display: none !important;
+    }
+
+    &__page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(8);
+      height: rem(8);
+      padding: 0;
+      background-color: var(--color-white-50);
+      border: none;
+      border-radius: 50%;
+
+      &.is-active {
+        background-color: var(--color-brand-yellow);
+      }
+    }
+  }
+
+  &:not(.is-overflow) .splide__pagination {
+    display: flex;
+  }
+}

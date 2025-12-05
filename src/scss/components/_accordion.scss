@@ -1,0 +1,62 @@
+/*! ==========================================================================
+ *  .accordion
+ *  ========================================================================== */
+.accordion {
+  // .accordion__trigger
+  &__trigger {
+    position: relative;
+    display: flex;
+    gap: rem(24);
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    color: inherit;
+    font: var(--font-heading-3);
+    text-align: left;
+    list-style: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--color-brand-yellow);
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    .icon {
+      font-size: fluid-rem(40, 24);
+    }
+
+    &[aria-expanded="true"] {
+      color: var(--color-brand-yellow);
+
+      .icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &.is-open {
+    .accordion__trigger {
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      padding 0.3s ease;
+  }
+
+  // .accordion__content
+  &__content {
+    padding-top: fluid-rem(16, 8);
+  }
+}

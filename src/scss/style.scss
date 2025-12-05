@@ -1,0 +1,66 @@
+// ==========================================
+// Global
+// ==========================================
+@import "./global/functions";
+@import "./global/media-query";
+@import "./global/mixins";
+@import "./global/variables";
+@import "./global/normalize";
+@import "./global/fonts";
+@import "./global/global";
+@import "./global/utils";
+
+// ==========================================
+// Components
+// ==========================================
+// Не использованы
+// @import "./components/decor-image";
+// @import "./components/form-input";
+
+// Использованы
+@import "./components/typography";
+@import "./components/scrollbar";
+@import "./components/page";
+@import "./components/icon";
+@import "./components/button";
+@import "./components/container";
+@import "./components/logo";
+@import "./components/tabs";
+@import "./components/content";
+@import "./components/socials";
+@import "./components/section";
+@import "./components/splide";
+@import "./components/form";
+@import "./components/accordion";
+@import "./components/breadcrumbs";
+@import "./components/features-list";
+@import "./components/nav";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/page-top";
+@import "./components/tour-format";
+@import "./components/about-tour";
+@import "./components/faq";
+@import "./components/story-article";
+@import "./components/stories";
+@import "./components/feedback";
+@import "./components/footer";
+@import "./components/audio";
+@import "./components/legend";
+@import "./components/review-card";
+@import "./components/reviews";
+@import "./components/modal";
+@import "./components/modal-schedule";
+@import "./components/modal-certificate";
+@import "./components/routes";
+@import "./components/calendar";
+@import "./components/earn-with-us";
+@import "./components/income-example";
+@import "./components/offer-locations";
+@import "./components/partners-benefits";
+@import "./components/get-started";
+@import "./components/pagination";
+@import "./components/stories-page";
+@import "./components/article";
+@import "./components/contacts";
+@import "./components/about";

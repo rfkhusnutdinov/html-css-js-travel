@@ -1,0 +1,37 @@
+/*! ==========================================================================
+ *  .content
+ *  ========================================================================== */
+.content {
+  & > * {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    font: var(--font-heading-3);
+  }
+
+  .two-columns {
+    column-count: 2;
+    column-gap: rem(24);
+
+    & > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @include media-breakpoint(md) {
+      column-count: 1;
+    }
+  }
+}

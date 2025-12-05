@@ -1,0 +1,33 @@
+/*! ==========================================================================
+ *  .offer-locations
+ *  ========================================================================== */
+
+.offer-locations {
+  // .offer-locations__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: fluid-rem(48, 24) fluid-rem(24, 16);
+
+    @include media-breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .offer-locations__list-item
+  &__list-item {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+
+    @include media-breakpoint(sm) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .icon {
+      color: var(--color-brand-yellow);
+      font-size: fluid-rem(40, 32);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/*! ==========================================================================
+ *  .section
+ *  ========================================================================== */
+.section {
+  --section-padding-block: #{fluid-rem(75, 40)};
+
+  padding-block: var(--section-padding-block);
+
+  &--pt-big {
+    padding-top: calc(var(--section-padding-block) * 2);
+  }
+
+  &--pb-big {
+    padding-bottom: calc(var(--section-padding-block) * 2);
+  }
+
+  &--first {
+    padding-top: fluid-rem(150, 40);
+  }
+
+  &--page {
+    padding-top: rem(24);
+  }
+
+  &__top {
+    margin-bottom: fluid-rem(48, 24);
+  }
+
+  // .section__title
+  &__title {
+    margin: 0;
+    color: var(--color-brand-yellow);
+    text-align: center;
+  }
+
+  // .section__subtitle
+  &__subtitle {
+    margin-top: fluid-rem(16, 8);
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

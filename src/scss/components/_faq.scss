@@ -1,0 +1,20 @@
+/*! ==========================================================================
+ *  .faq
+ *  ========================================================================== */
+.faq {
+  // .faq__list
+  &__list {
+    max-width: rem(846);
+    margin-inline: auto;
+    padding-top: fluid-rem(0, 8);
+  }
+
+  // .faq__list-item
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: fluid-rem(32, 24);
+      padding-bottom: fluid-rem(32, 24);
+      border-bottom: 1px solid var(--color-white-20);
+    }
+  }
+}

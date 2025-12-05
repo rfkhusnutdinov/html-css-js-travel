@@ -1,0 +1,13 @@
+/*! ==========================================================================
+ *  .container
+ *  ========================================================================== */
+.container {
+  --container-width: #{rem(1280)};
+  --container-padding-x: #{fluid-rem(80, 16)};
+
+  width: min(
+    var(--container-width),
+    calc(100% - 2 * var(--container-padding-x))
+  );
+  margin-inline: auto;
+}

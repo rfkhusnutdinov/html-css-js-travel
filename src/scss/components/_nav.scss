@@ -1,0 +1,185 @@
+/*! ==========================================================================
+ *  .nav
+ *  ========================================================================== */
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 0;
+  height: 100vh;
+  height: 100dvh;
+  padding: fluid-rem(108, 88) 0 0;
+  overflow: hidden;
+  color: var(--color-white-100);
+  background-color: #281d1d;
+  transition: width 0.3s ease;
+
+  &.is-active {
+    width: min(
+      calc(
+        fluid-rem(828, 400) + var(--scrollbar-width) +
+          (
+            100vw - min(
+                var(--container-width),
+                calc(100vw - 2 * var(--container-padding-x))
+              )
+          ) /
+          2
+      ),
+      100vw
+    );
+
+    @include media-breakpoint(md) {
+      width: calc(100vw);
+    }
+
+    .nav__wrapper {
+      opacity: 1;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: fluid-rem(40, 32);
+    align-items: flex-start;
+    min-width: min(
+      calc(
+        fluid-rem(828, 400) + var(--scrollbar-width) +
+          (
+            100vw - min(
+                var(--container-width),
+                calc(100vw - 2 * var(--container-padding-x))
+              )
+          ) /
+          2
+      ),
+      100vw
+    );
+    max-width: unset;
+    padding: 0
+      calc(
+        var(--scrollbar-width) +
+          (
+            100vw - min(
+                var(--container-width),
+                calc(100vw - 2 * var(--container-padding-x))
+              )
+          ) /
+          2
+      )
+      fluid-rem(40, 24) fluid-rem(80, 16);
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    @include media-breakpoint(md) {
+      width: calc(100vw);
+      padding-right: fluid-rem(80, 16);
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: rem(24);
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    @include media-breakpoint(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .nav__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+
+    @include media-breakpoint(lg) {
+      display: grid;
+      grid-column: span 2;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(8) rem(24);
+    }
+  }
+
+  // .nav__list-item
+  &__list-item {
+    width: 100%;
+  }
+
+  // .nav__list-link
+  &__list-link {
+    display: block;
+    font: var(--font-heading-3);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--color-brand-yellow);
+    }
+  }
+
+  &__col {
+  }
+
+  &__col-title {
+    margin-top: 0;
+    margin-bottom: fluid-rem(16, 12);
+    font: var(--font-heading-3);
+  }
+
+  &__col-list {
+    display: flex;
+    flex-direction: column;
+    gap: fluid-rem(12, 8);
+    align-items: flex-start;
+  }
+
+  &__col-list-item {
+    display: block;
+    width: 100%;
+  }
+
+  &__col-list-link {
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--color-brand-yellow);
+    }
+  }
+
+  // .nav__contacts
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    align-items: flex-start;
+    margin-top: auto;
+  }
+
+  // .nav__mail
+  &__mail {
+    font-size: rem(14);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--color-brand-yellow);
+    }
+  }
+
+  // .nav__socials
+  &__socials {
+  }
+}

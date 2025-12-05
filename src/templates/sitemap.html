@@ -1,0 +1,55 @@
+{% extends "layouts/_default.html" %} {% set title = "Статья" %} {% set pageId =
+"article" %} {% block main %}
+
+<div class="breadcrumbs" data-aos="fade-up">
+  <div class="container">
+    <nav class="breadcrumbs__nav" aria-label="Breadcrumb">
+      <ol class="list-reset breadcrumbs__list">
+        <li class="breadcrumbs__list-item">
+          <a class="breadcrumbs__list-link" href="./">Главная</a>
+        </li>
+        <li class="breadcrumbs__list-item" aria-current="page">
+          Страницы сайта
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<article class="section section--page article" data-aos="fade-up">
+  <div class="container">
+    <div class="article__wrapper">
+      <h1 class="article__title">Страницы сайта</h1>
+      <div class="content article__content">
+        <ol>
+          <li>
+            <a href="./">Главная страница</a>
+          </li>
+          <li>
+            <a href="./partners.html">Партнерская программа</a>
+          </li>
+          <li>
+            <a href="./birthday.html">День рождения</a>
+          </li>
+          <li>
+            <a href="./new-year.html">Новый год</a>
+          </li>
+          <li>
+            <a href="./blog.html">Блог</a>
+          </li>
+          <li>
+            <a href="./article.html">Статья</a>
+          </li>
+          <li>
+            <a href="./about.html">О проекте</a>
+          </li>
+          <li>
+            <a href="./contacts.html">Контакты</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</article>
+
+{% endblock %}
